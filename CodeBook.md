@@ -19,4 +19,4 @@
            class: data.frame, 10299 obs. of 68 variables
 - **activity_labels**: data from the file 'activity_labels.txt', class: data.frame, 6 obs. of 2 variables
 - **average**: the average of each variable for each activity and each subject, class: data.frame, 
--              180 obs. of 68 variables
+               180 obs. of 68 variables
