@@ -29,3 +29,5 @@ Now put the 'run_analysis.R' in the working directory and run it. The script wil
 7. Appropriately label the data set with descriptive variable names.
 8. Get the average of each variable for each activity and each subject.
 9. Write the average data set into a txt file.
+
+Description of all the objects in the script refers to [CodeBook](https://github.com/bobjones777/Getting-and-Cleaning-Data/blob/master/CodeBook.md).
