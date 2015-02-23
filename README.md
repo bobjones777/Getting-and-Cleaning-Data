@@ -7,18 +7,21 @@ Here are the Samsung data for the project:
 [Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 ## How The Script Works
 You should download the zipped dataset file and unzip it in your working directory. The dataset should be in the "UCI HAR Dataset" directory. The dataset includes the following files:
-- 'README.txt'
-- 'features_info.txt': Shows information about the variables used on the feature vector.
-- 'features.txt': List of all features.
-- 'activity_labels.txt': Links the class labels with their activity name.
-- 'train/X_train.txt': Training set.
-- 'train/y_train.txt': Training labels.
-- 'train/subject_train.txt' : The subject who performed the activity in Training set.
-- 'test/X_test.txt': Test set.
-- 'test/y_test.txt': Test labels.
-- 'test/subject_test.txt' : The subject who performed the activity in Test set.
+- 'features_info.txt'
+- 'features.txt'
+- 'activity_labels.txt'
+- 'train/X_train.txt'
+- 'train/y_train.txt'
+- 'train/subject_train.txt'
+- 'test/X_test.txt'
+- 'test/y_test.txt'
+- 'test/subject_test.txt'
 
-Now put the 'run_analysis.R' in the working directory and run it. The script will get and clean the dataset, create a tidy data set and then write it into the 'average.txt' file.
+Then put the 'run_analysis.R' in the working directory. The script uses Hmisc package, So you need install this package in advance. Now you can run the script. The script will get and clean the dataset, create a tidy data set and then write it into the 'average.txt' file. You can read the result data file into R to check it. The command for reading it in and looking at it in R would be
+
+    data <- read.table("./UCI HAR Dataset/average.txt", header = TRUE)
+    View(data)
+
 ## What The Script does
 1. Read the training and the test sets.
 2. Merge the training and the test sets to create one data set.
