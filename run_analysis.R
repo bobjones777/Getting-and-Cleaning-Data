@@ -14,7 +14,7 @@ test <- cbind(x_test, y_test, subject_test)
 data <- rbind(train, test)
 
 # remove all the variables but data
-rm(list = ls()[-which(ls() == "data")])
+# rm(list = ls()[-which(ls() == "data")])
 
 # Read the list of all features
 features <- read.table("./UCI HAR Dataset/features.txt", colClasses = "character")
@@ -26,14 +26,15 @@ msd.pos <- grep("-mean\\(|-std\\(", features[, 2])
 msd <- data[, c(563, 562, msd.pos)]
 
 # remove the variable data
-rm(data)
+#rm(data)
 
 # Use descriptive activity names to name the activities in the data set
 activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt")
 msd[, 2] <- activity_labels[msd[, 2], 2]
 
 # Appropriately label the data set with descriptive variable names
-names(msd) <- c("subject", "activity", features[msd.pos, 2])
+var.names <- gsub("\\(\\)", "", gsub("-", ".", features[msd.pos, 2]))
+names(msd) <- c("subject", "activity", var.names)
 
 # Get the average of each variable for each activity and each subject
 average <- Hmisc::summarize(msd[,-(1:2)], Hmisc::llist(msd$subject, msd$activity), 
@@ -43,4 +44,4 @@ average <- Hmisc::summarize(msd[,-(1:2)], Hmisc::llist(msd$subject, msd$activity
 write.table(average, file = "./UCI HAR Dataset/average.txt", row.name=FALSE)
 
 # Remove everything in the working environment
-rm(list=ls())
+#rm(list=ls())
