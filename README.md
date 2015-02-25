@@ -22,7 +22,7 @@ Here are the data for the project:
 - **Data**
 
 You should download the zipped data file and unzip it in your working directory. The dataset should be in the "UCI HAR Dataset" directory. The dataset structure is as follow:
-- './UCI HAR Dataset/features_info.txt'
+
 - './UCI HAR Dataset/features.txt'
 - './UCI HAR Dataset/activity_labels.txt'
 - './UCI HAR Dataset/train/X_train.txt'
@@ -32,7 +32,7 @@ You should download the zipped data file and unzip it in your working directory.
 - './UCI HAR Dataset/test/y_test.txt'
 - './UCI HAR Dataset/test/subject_test.txt'
 
-The above 9 files will be used and manipulated in the script. In addition, the data files in the 'Inertial Signals' directory are nothing to do with this project and not used.
+The above 8 data files will be used and manipulated in the script. In addition, the data files in the 'Inertial Signals' directory are nothing to do with this project and not used.
 
 - **Runtime Environment**
 
