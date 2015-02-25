@@ -42,7 +42,9 @@
 - **data**: combine *train* and *test* by rows, class: data.frame, 10299 obs. of 563 variables  
     10299 obs.: correspond to 10299 activities performed by 30 subjects  
     563 variables: 561 measurements + activity number + subject ID  
-    **data is the complete dataset.**  
+    *data is the complete dataset.* The data structure is as follow. Refer to [this thread](https://class.coursera.org/getdata-011/forum/thread?thread_id=181#comment-510), please.
+
+![data structure](https://github.com/bobjones777/Getting-and-Cleaning-Data/blob/master/DataStructure.png "data structure")
 
 ## Data Subset
 - **msd**: extracted data, including only the measurements for mean and standard deviation for each measurement, class: data.frame, 10299 obs. of 68 variables  
