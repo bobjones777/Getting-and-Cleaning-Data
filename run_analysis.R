@@ -37,11 +37,11 @@ var.names <- gsub("\\(\\)", "", gsub("-", ".", features[msd.pos, 2]))
 names(msd) <- c("subject", "activity", var.names)
 
 # Get the average of each variable for each activity and each subject
-average <- Hmisc::summarize(msd[,-(1:2)], Hmisc::llist(msd$subject, msd$activity), 
+average <- Hmisc::summarize(msd[,-(1:2)], Hmisc::llist(subject = msd$subject, activity = msd$activity), 
                             colMeans, keepcolnames = T)
 
 # Write the average data set into a txt file
-write.table(average, file = "./UCI HAR Dataset/average.txt", row.name=FALSE)
+write.table(average, file = "./UCI HAR Dataset/average.txt", row.name = FALSE)
 
 # Remove everything in the working environment
 #rm(list=ls())
