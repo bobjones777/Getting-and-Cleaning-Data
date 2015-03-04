@@ -3,6 +3,7 @@
 ## Units
 - The units used for the accelerations (total and body) are 'g's (gravity of earth -> 9.80665 m/seg2).
 - The gyroscope units are rad/seg.
+- Features are normalized and bounded within [-1,1].
 
 ## Raw Data
 - **features.txt**: read into *features*, class: data.frame, 561 obs. of 2 variables  
